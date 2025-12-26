@@ -1,0 +1,36 @@
+.start-screen {
+    color: #fff;
+    min-height: 100vh;
+    justify-content: top;
+    align-items: normal;
+
+
+    /* BACKGROUND IMAGE */
+    background-image: url("/background-img.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 5000% 40%;
+}
+.start-screen h1 {
+    margin: 0;
+}
+
+.title {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    text-align: center;
+    font-size: 10rem;
+    transform: translateY(100px);
+}
+
+.start-button {
+    padding: 20px;
+    font-size: 3rem;
+    justify-content: center;
+}
+
+.highlight {
+    color:#f0d92c;
+}

@@ -2,13 +2,23 @@ import { useState } from 'react'
 import dude from './assets/dude.jpg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import './styles/main.css'
+
+import Start from "./components/start";
+import Game from "./components/game"
 
 function App() {
   const [count, setCount] = useState(0)
+  const [gameStarted, setGameStarted] = useState(false);
 
   return (
     <>
-      <div>
+    {gameStarted ? (
+      <Game/>
+    ) : (
+      <Start onStart={() => setGameStarted(true)} />
+    )}
+    <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -28,6 +38,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      
     </>
   )
 }
